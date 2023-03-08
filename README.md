@@ -1,9 +1,23 @@
 Deze repo is onderdeel van het vak informatica op het Emmauscollege Rotterdam.
 
-STAPPEN:
+## SOORT SPEL: Penalty scoren
+Speler begint op penalty stip
+Speler draagt de bal om op doel te schieten
+Punten krijg je door te scoren
+Vijand is een keeper
+Keeper beweegt van links naar rechts met snelheid
+Mogelijkheid als meerdere evels gemaakt worden beweegt keeper sneller
 
-STAP1)
-+Veld creeren
+
+## STAPPEN:
+
+- STAP 1 (Tekenen)
+ + Veld creeren
+ + Lijnen zoals echt voetbalveld
+ + Doel tekenen
+ + Keeper tekenen
+
+- STAP 2 
 
 [Meer info over deze opdracht](https://informatica.emmauscollege.nl/)
 
