@@ -1,5 +1,10 @@
 Deze repo is onderdeel van het vak informatica op het Emmauscollege Rotterdam.
 
+STAPPEN:
+
+STAP1)
++Veld creeren
+
 [Meer info over deze opdracht](https://informatica.emmauscollege.nl/)
 
 ## Documentatie
