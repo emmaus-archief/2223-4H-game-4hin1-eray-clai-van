@@ -18,9 +18,14 @@ Mogelijkheid als meerdere evels gemaakt worden beweegt keeper sneller
  + Keeper tekenen
 
 - STAP 2
-- bal bewegen
-- keeper bewegen
-- botsing detecteren
+ + bal bewegen
+ + keeper bewegen
+ + botsing detecteren
+
+-STAP 3
+ + Punten
+ + Eindscherm (gameover)
+ + Beginscherm (uitleg)
 
 [Meer info over deze opdracht](https://informatica.emmauscollege.nl/)
 
