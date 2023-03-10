@@ -17,7 +17,10 @@ Mogelijkheid als meerdere evels gemaakt worden beweegt keeper sneller
  + Doel tekenen
  + Keeper tekenen
 
-- STAP 2 
+- STAP 2
+- bal bewegen
+- keeper bewegen
+- botsing detecteren
 
 [Meer info over deze opdracht](https://informatica.emmauscollege.nl/)
 
