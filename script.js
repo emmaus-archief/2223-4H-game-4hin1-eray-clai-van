@@ -58,6 +58,9 @@ var tekenAlles = function() {
   // achtergrond
 
   // vijand
+  fill("white");
+  rect(400,1,10,100);
+    rect(820,1,10,100);
 
   // kogel
 
@@ -93,7 +96,7 @@ function setup() {
   createCanvas(1280, 720);
 
   // Kleur de achtergrond blauw, zodat je het kunt zien
-  background('green');
+  background("green");
 }
 
 /**
@@ -115,3 +118,6 @@ function draw() {
 
   }
 }
+
+
+

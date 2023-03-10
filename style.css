@@ -13,6 +13,8 @@
 }
 
 html, body {
+
+  background-image: url("");
   /* verwijder marge tussen canvas en rand van window
    */ 
   margin: 0px;
