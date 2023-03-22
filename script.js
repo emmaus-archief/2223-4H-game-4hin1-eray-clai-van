@@ -59,6 +59,8 @@ var tekenAlles = function() {
     fill("white");
     rect(400,1,10,100);
     rect(820,1,10,100);
+    rect(900,1,10,400);
+    line(830,100,400,100);
  
   // vijand
   fill("white");
