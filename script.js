@@ -56,11 +56,13 @@ var verwerkBotsing = function() {
  */
 var tekenAlles = function() {
   // achtergrond
-
+    fill("white");
+    rect(400,1,10,100);
+    rect(820,1,10,100);
+ 
   // vijand
   fill("white");
-  rect(400,1,10,100);
-    rect(820,1,10,100);
+  
 
   // kogel
 
