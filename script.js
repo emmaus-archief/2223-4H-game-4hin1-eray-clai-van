@@ -34,6 +34,18 @@ var beweegAlles = function() {
   if (keyIsDown(37)) {
   spelerX = spelerX -1;
   }
+
+   if (keyIsDown(39)) {
+  spelerX = spelerX +1;
+  }
+
+   if (keyIsDown(38)) {
+  spelerY = spelerY -1;
+  }
+
+   if (keyIsDown(40)) {
+  spelerY = spelerY +1;
+  }
   // vijand
 
   // kogel
