@@ -63,8 +63,15 @@ var tekenAlles = function() {
     fill("white");
     rect(400,1,10,100);
     rect(820,1,10,100);
-    rect(900,1,10,400);
+    rect(920,1,10,200);
+    rect(300,1,10,200);
+    strokeWeight(5);
+    stroke(255,255,255); 
+    
+    
     line(830,100,400,100);
+    line(920,200,300,200);
+    
  
   // vijand
   fill("white");
