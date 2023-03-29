@@ -31,20 +31,13 @@ var spelerY = 600; // y-positie van speler
  */
 var beweegAlles = function() {
   // speler
-  if (keyIsDown(37)) {
-  spelerX = spelerX -1;
+  if(mouseIsPressed ===true & mouseIsPressed === false){
+    snelheidX = (mouseX - spelerX) /100;
+    snelheidY = (mouseY - spelerY) /100;
+    
+    
   }
-
-   if (keyIsDown(39)) {
-  spelerX = spelerX +1;
-  }
-
-   if (keyIsDown(38)) {
-  spelerY = spelerY -1;
-  }
-
-   if (keyIsDown(40)) {
-  spelerY = spelerY +1;
+  
   }
   // vijand
 
