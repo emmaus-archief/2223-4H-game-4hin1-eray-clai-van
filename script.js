@@ -19,8 +19,16 @@ const SPELEN = 1;
 const GAMEOVER = 2;
 var spelStatus = SPELEN;
 
+
 var spelerX = 600; // x-positie van speler
 var spelerY = 600; // y-positie van speler
+var snelheidX = 0;
+var snelheidY = 0;
+var vijandX = 150;
+var vijandY = 150;
+var aantal;
+var mouseIsPressedVorige = false;
+var mouseIsPressedNu = false;
 
 /* ********************************************* */
 /* functies die je gebruikt in je game           */
@@ -31,18 +39,47 @@ var spelerY = 600; // y-positie van speler
  */
 var beweegAlles = function() {
   // speler
-  if(mouseIsPressed ===true & mouseIsPressed === false){
+
+   mouseIsPressedVorige = mouseIsPressedNu;
+  mouseIsPressedNu = mouseIsPressed;
+  if (mouseIsPressedNu === true && mouseIsPressedVorige === false) {
+    // nieuwe waaarde voor snelheidX en snelheidY maken
     snelheidX = (mouseX - spelerX) /100;
     snelheidY = (mouseY - spelerY) /100;
-    
+    punten = punten - 1;  
+  }
+  
+  
+  
+  if (spelerX < 100 ) {
+    snelheidX = snelheidX * -1;
+  }
+
+  if (spelerY < 54) {
+    snelheidY = snelheidY * -1;
+   }
+
+  if (spelerX > 1283) {
+    snelheidX = snelheidX * -1;
+  }  
+
+  if (spelerY > 696) {
+    snelheidY = snelheidY * -1;
+  }
+  spelerX = spelerX + snelheidX;
+  spelerY = spelerY + snelheidY;
+  console.log("snelheidX =" + snelheidX);
+  // speler remmen
+ snelheidX = snelheidX * 0.99;
+ snelheidY = snelheidY * 0.99;
     
   }
   
-  }
+  
   // vijand
 
   // kogel
-};
+
 
 /**
  * Checkt botsingen
