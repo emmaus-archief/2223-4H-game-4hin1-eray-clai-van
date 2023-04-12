@@ -77,7 +77,7 @@ var beweegAlles = function() {
   
   
   // vijand
-
+ 
   // kogel
 
 
@@ -102,6 +102,8 @@ var tekenAlles = function() {
   // achtergrond
     fill("green");
     rect(0,0, 1280, 720);
+
+  // keepersvak
     fill("white");
     rect(400,1,10,100);
     rect(820,1,10,100);
@@ -113,7 +115,8 @@ var tekenAlles = function() {
     
     line(830,100,400,100);
     line(920,200,300,200);
-    
+  // penalty en 16 metergebied
+    ellipse(620, 480, 70, 70);
  
   // vijand
   fill("red");
@@ -124,7 +127,7 @@ var tekenAlles = function() {
 
   // speler
   fill("gray");
-  ellipse(spelerX - 25, spelerY - 25, 50, 50);
+  ellipse(spelerX - 20, spelerY -120, 50, 50);
 
 
   // punten en health
