@@ -26,7 +26,7 @@ var snelheidX = 0;
 var snelheidY = 0;
 var vijandX = 150;
 var vijandY = 150;
-var aantal;
+
 var mouseIsPressedVorige = false;
 var mouseIsPressedNu = false;
 
@@ -46,7 +46,7 @@ var beweegAlles = function() {
     // nieuwe waaarde voor snelheidX en snelheidY maken
     snelheidX = (mouseX - spelerX) /100;
     snelheidY = (mouseY - spelerY) /100;
-    punten = punten - 1;  
+    
   }
   
   
