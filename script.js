@@ -20,12 +20,12 @@ const GAMEOVER = 2;
 var spelStatus = SPELEN;
 
 
-var spelerX = 600; // x-positie van speler
+var spelerX = 640; // x-positie van speler
 var spelerY = 600; // y-positie van speler
 var snelheidX = 0;
 var snelheidY = 0;
-var vijandX = 150;
-var vijandY = 150;
+var vijandX = 620;
+var vijandY = 80;
 
 var mouseIsPressedVorige = false;
 var mouseIsPressedNu = false;
@@ -116,13 +116,14 @@ var tekenAlles = function() {
     
  
   // vijand
-  fill("white");
+  fill("red");
+  ellipse(vijandX, vijandY, 50, 50);
   
 
   // kogel
 
   // speler
-  fill("white");
+  fill("gray");
   ellipse(spelerX - 25, spelerY - 25, 50, 50);
 
 
