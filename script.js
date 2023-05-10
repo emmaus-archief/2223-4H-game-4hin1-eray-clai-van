@@ -51,7 +51,7 @@ var beweegAlles = function() {
   
   
   
-  if (spelerX < 100 ) {
+  if (spelerX < 50 ) {
     snelheidX = snelheidX * -1;
   }
 
@@ -59,19 +59,19 @@ var beweegAlles = function() {
     snelheidY = snelheidY * -1;
    }
 
-  if (spelerX > 1283) {
+  if (spelerX > 1270) {
     snelheidX = snelheidX * -1;
   }  
 
-  if (spelerY > 696) {
+  if (spelerY > 810) {
     snelheidY = snelheidY * -1;
   }
   spelerX = spelerX + snelheidX;
   spelerY = spelerY + snelheidY;
   console.log("snelheidX =" + snelheidX);
   // speler remmen
- snelheidX = snelheidX * 0.99;
- snelheidY = snelheidY * 0.99;
+ snelheidX = snelheidX * 1;
+ snelheidY = snelheidY * 1;
     
   }
   
@@ -88,9 +88,11 @@ var beweegAlles = function() {
  */
 var verwerkBotsing = function() {
   // botsing speler tegen vijand
-    if (spelerX === vijandX &&
-        spelerY === vijandY) {
-        console.log("Botsing");
+    if (spelerX - vijandX < 100 &&
+        spelerX - vijandX > -100 &&
+        spelerY - vijandY < 100 &&
+        spelerY - vijandY > -100 ) {
+       console.log("botsing")
         }
   // botsing kogel tegen vijand
 
