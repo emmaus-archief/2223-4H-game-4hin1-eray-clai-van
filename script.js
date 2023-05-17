@@ -89,13 +89,7 @@ var beweegAlles = function() {
  */
 var verwerkBotsing = function() {
   // botsing speler tegen vijand
-    if (spelerX - vijandX < 100 &&
-        spelerX - vijandX > -100 &&
-        spelerY - vijandY < 100 &&
-        spelerY - vijandY > -100 ) {
-      
-       console.log("botsing")
-        }
+    
   // botsing kogel tegen vijand
 
   // update punten en health
@@ -146,6 +140,13 @@ var tekenAlles = function() {
  * anders return false
  */
 var checkGameOver = function() {
+  if (spelerX - vijandX < 100 &&
+        spelerX - vijandX > -100 &&
+        spelerY - vijandY < 100 &&
+        spelerY - vijandY > -100 ) {
+        console.log("botsing")
+        return true;
+        }
   // check of HP 0 is , of tijd op is, of ...
   return false;
 };
