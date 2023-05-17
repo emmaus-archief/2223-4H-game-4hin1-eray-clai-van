@@ -180,16 +180,20 @@ function draw() {
     tekenAlles();
     if (checkGameOver()) {
       spelStatus = GAMEOVER;
+      
     }
   }
   if (spelStatus === GAMEOVER) {
     // teken game-over scherm
-
+      console.log("game over");
+    textSize (50);
+    fill("white");
+    text("game over", 200, 500);
   }
 
     if (spelStatus === UITLEG) {
     // teken uitleg scherm
-
+      console.log("uitleg");
   }
 }
 
