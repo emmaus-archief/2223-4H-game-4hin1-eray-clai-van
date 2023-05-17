@@ -17,6 +17,7 @@
 /* ********************************************* */
 const SPELEN = 1;
 const GAMEOVER = 2;
+const UITLEG = 3;
 var spelStatus = SPELEN;
 
 
@@ -92,6 +93,7 @@ var verwerkBotsing = function() {
         spelerX - vijandX > -100 &&
         spelerY - vijandY < 100 &&
         spelerY - vijandY > -100 ) {
+      
        console.log("botsing")
         }
   // botsing kogel tegen vijand
@@ -181,6 +183,11 @@ function draw() {
   }
   if (spelStatus === GAMEOVER) {
     // teken game-over scherm
+
+  }
+
+    if (spelStatus === UITLEG) {
+    // teken uitleg scherm
 
   }
 }
