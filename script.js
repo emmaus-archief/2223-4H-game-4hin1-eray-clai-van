@@ -188,7 +188,12 @@ function draw() {
       console.log("game over");
     textSize (50);
     fill("white");
-    text("game over", 200, 500);
+    text("game over, druk spatie voor start", 100, 400);
+    if (keyIsDown(32)){
+      spelerX = 640;
+      spelStatus = SPELEN;
+    }
+    
   }
 
     if (spelStatus === UITLEG) {
