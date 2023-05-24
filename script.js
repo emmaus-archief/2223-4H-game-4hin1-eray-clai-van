@@ -41,28 +41,28 @@ var mouseIsPressedNu = false;
 var beweegAlles = function() {
   // speler
 
-   mouseIsPressedVorige = mouseIsPressedNu;
+  mouseIsPressedVorige = mouseIsPressedNu;
   mouseIsPressedNu = mouseIsPressed;
   if (mouseIsPressedNu === true && mouseIsPressedVorige === false) {
     // nieuwe waaarde voor snelheidX en snelheidY maken
-    snelheidX = (mouseX - spelerX) /100;
-    snelheidY = (mouseY - spelerY) /100;
-    
+    snelheidX = (mouseX - spelerX) / 100;
+    snelheidY = (mouseY - spelerY) / 100;
+
   }
-  
-  
-  
-  if (spelerX < 50 ) {
+
+
+
+  if (spelerX < 50) {
     snelheidX = snelheidX * -1;
   }
 
   if (spelerY < 54) {
     snelheidY = snelheidY * -1;
-   }
+  }
 
   if (spelerX > 1270) {
     snelheidX = snelheidX * -1;
-  }  
+  }
 
   if (spelerY > 810) {
     snelheidY = snelheidY * -1;
@@ -71,15 +71,15 @@ var beweegAlles = function() {
   spelerY = spelerY + snelheidY;
   console.log("snelheidX =" + snelheidX);
   // speler remmen
- snelheidX = snelheidX * 1;
- snelheidY = snelheidY * 1;
-    
-  }
-  
-  
-  // vijand
- 
-  // kogel
+  snelheidX = snelheidX * 1;
+  snelheidY = snelheidY * 1;
+
+}
+
+
+// vijand
+
+// kogel
 
 
 /**
@@ -89,7 +89,7 @@ var beweegAlles = function() {
  */
 var verwerkBotsing = function() {
   // botsing speler tegen vijand
-    
+
   // botsing kogel tegen vijand
 
   // update punten en health
@@ -101,34 +101,34 @@ var verwerkBotsing = function() {
  */
 var tekenAlles = function() {
   // achtergrond
-    fill("green");
-    rect(0,0, 1280, 720);
+  fill("green");
+  rect(0, 0, 1280, 720);
 
   // keepersvak
-    fill("white");
-    rect(400,1,10,100);
-    rect(820,1,10,100);
-    rect(920,1,10,200);
-    rect(300,1,10,200);
-    strokeWeight(5);
-    stroke(255,255,255); 
-    
-    
-    line(830,100,400,100);
-    line(920,200,300,200);
+  fill("white");
+  rect(400, 1, 10, 100);
+  rect(820, 1, 10, 100);
+  rect(920, 1, 10, 200);
+  rect(300, 1, 10, 200);
+  strokeWeight(5);
+  stroke(255, 255, 255);
+
+
+  line(830, 100, 400, 100);
+  line(920, 200, 300, 200);
   // penalty en 16 metergebied
-    ellipse(620, 480, 70, 70);
- 
+  ellipse(620, 480, 70, 70);
+
   // vijand
   fill("red");
   ellipse(vijandX, vijandY, 50, 50);
-  
+
 
   // kogel
 
   // speler
   fill("gray");
-  ellipse(spelerX - 20, spelerY -120, 50, 50);
+  ellipse(spelerX - 20, spelerY - 120, 50, 50);
 
 
   // punten en health
@@ -141,12 +141,12 @@ var tekenAlles = function() {
  */
 var checkGameOver = function() {
   if (spelerX - vijandX < 100 &&
-        spelerX - vijandX > -100 &&
-        spelerY - vijandY < 100 &&
-        spelerY - vijandY > -100 ) {
-        console.log("botsing")
-        return true;
-        }
+    spelerX - vijandX > -100 &&
+    spelerY - vijandY < 100 &&
+    spelerY - vijandY > -100) {
+    console.log("botsing")
+    return true;
+  }
   // check of HP 0 is , of tijd op is, of ...
   return false;
 };
@@ -180,35 +180,37 @@ function draw() {
     tekenAlles();
     if (checkGameOver()) {
       spelStatus = GAMEOVER;
-      
+
     }
   }
   if (spelStatus === GAMEOVER) {
     // teken game-over scherm
-      console.log("game over");
-    textSize (50);
+    console.log("game over");
+    textSize(50);
     fill("white");
     text("game over, druk spatie voor start", 100, 400);
-    if (keyIsDown(32)){ //spatie
+    if (keyIsDown(32)) { //spatie
+      snelheidX = 0;
+      snelheidY = 0;
       spelStatus = UITLEG;
     }
-    
+
   }
 
-    if (spelStatus === UITLEG) {
+  if (spelStatus === UITLEG) {
     // teken uitleg scherm
-      console.log("uitleg");
-      textSize(50);
-      fill("green");
-      rect(0, 0, 1280, 720);
-      fill("white");
-      text ("uitleg: druk op enter", 200, 400);
-      if (keyIsDown(13)){ //enter
-        spelerX = 640;
-        spelerY = 600;
-        spelStatus = SPELEN;
+    console.log("uitleg");
+    textSize(50);
+    fill("green");
+    rect(0, 0, 1280, 720);
+    fill("white");
+    text("uitleg: druk op enter", 200, 400);
+    if (keyIsDown(13)) { //enter
+      spelerX = 640;
+      spelerY = 600;
+      spelStatus = SPELEN;
+    }
   }
-}
 }
 
 
