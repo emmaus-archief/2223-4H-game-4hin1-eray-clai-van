@@ -189,9 +189,8 @@ function draw() {
     textSize (50);
     fill("white");
     text("game over, druk spatie voor start", 100, 400);
-    if (keyIsDown(32)){
-      spelerX = 640;
-      spelStatus = SPELEN;
+    if (keyIsDown(32)){ //spatie
+      spelStatus = UITLEG;
     }
     
   }
@@ -199,8 +198,17 @@ function draw() {
     if (spelStatus === UITLEG) {
     // teken uitleg scherm
       console.log("uitleg");
+      textSize(50);
+      fill("green");
+      rect(0, 0, 1280, 720);
+      fill("white");
+      text ("uitleg: druk op enter", 200, 400);
+      if (keyIsDown(13)){ //enter
+        spelerX = 640;
+        spelerY = 600;
+        spelStatus = SPELEN;
   }
 }
-
+}
 
 
