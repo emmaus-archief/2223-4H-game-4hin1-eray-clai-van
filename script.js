@@ -78,6 +78,8 @@ var beweegAlles = function() {
 
 
 // vijand
+vijandX = vijandX +5;
+vijandY = vijandY +5;
 
 // kogel
 
