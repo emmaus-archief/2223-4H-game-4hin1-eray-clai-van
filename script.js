@@ -78,8 +78,14 @@ var beweegAlles = function() {
 
 
 // vijand
-vijandX = vijandX +5;
-vijandY = vijandY +5;
+vijandX = vijandX +1;
+if(vijandX > 50) {
+  vijandX = 1;
+}
+
+if (vijandX <2) {
+  vijandX =(200,800)
+}
 
 // kogel
 
