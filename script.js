@@ -227,4 +227,9 @@ if (spelStatus === UITLEGSCHERM) {
   textSize(50);
   fill("red");
   text("uitleg: je moet scoren zonder de keeper te raken en als je de keeper raakt ga je af, dus moet je opnieuw beginnen", 300,400);
+  if(keyIsdown(8)) {
+    spelerX = 640;
+    spelerY = 600;
+    spelStatus = UITLEG;
+  }
 }
