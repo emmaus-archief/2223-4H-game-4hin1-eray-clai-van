@@ -29,6 +29,7 @@ var snelheidY = 0;
 var vijandX = 620;
 var vijandY = 80;
 
+
 var mouseIsPressedVorige = false;
 var mouseIsPressedNu = false;
 
@@ -79,14 +80,15 @@ var beweegAlles = function() {
 
 
 // vijand
-vijandX = vijandX +1;
-if(vijandX > 50) {
-  vijandX = 1;
+
+if(vijandX > 10) {
+  vijandX = 2;
 }
 
-if (vijandX <2) {
-  vijandX =(200,800)
+if (vijandX <5) {
+  vijandX =(200,627);
 }
+
 
 // kogel
 
@@ -136,7 +138,7 @@ var tekenAlles = function() {
   // kogel
 
   // speler
-  fill("gray");
+  fill("black");
   ellipse(spelerX - 20, spelerY - 120, 50, 50);
 
 
