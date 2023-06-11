@@ -18,6 +18,7 @@
 const SPELEN = 1;
 const GAMEOVER = 2;
 const UITLEG = 3;
+const UITLEGSCHERM = 4;
 var spelStatus = SPELEN;
 
 
@@ -194,9 +195,9 @@ function draw() {
   if (spelStatus === GAMEOVER) {
     // teken game-over scherm
     console.log("game over");
-    textSize(50);
-    fill("white");
-    text("game over, druk spatie voor start", 100, 400);
+    textSize(65);
+    fill("red");
+    text("GAME OVER!, druk spatie voor start", 100, 400);
     if (keyIsDown(32)) { //spatie
       snelheidX = 0;
       snelheidY = 0;
@@ -208,11 +209,11 @@ function draw() {
   if (spelStatus === UITLEG) {
     // teken uitleg scherm
     console.log("uitleg");
-    textSize(50);
+    textSize(80);
     fill("green");
     rect(0, 0, 1280, 720);
-    fill("white");
-    text("uitleg: druk op enter", 200, 400);
+    fill("blue");
+    text("uitleg: druk op enter", 300, 400);
     if (keyIsDown(13)) { //enter
       spelerX = 640;
       spelerY = 600;
@@ -221,4 +222,9 @@ function draw() {
   }
 }
 
-
+if (spelStatus === UITLEGSCHERM) {
+  console.log("uitlegscherm");
+  textSize(50);
+  fill("red");
+  text("uitleg: je moet scoren zonder de keeper te raken en als je de keeper raakt ga je af, dus moet je opnieuw beginnen", 300,400);
+}
